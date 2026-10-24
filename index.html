@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>NOX TSR</title>
+  <meta name="description" content="NOX TSR — PC Optimizer &amp; Optimization Expert, Acting Leader of No Excuse Guild, Emulator Modifier.">
+  <meta name="theme-color" content="#07030f">
+  <meta name="color-scheme" content="dark">
+
+  <!-- Social preview. After deploying, change og:image to your full URL, e.g. https://your-site.com/assets/logo.png -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NOX TSR">
+  <meta property="og:description" content="PC Optimizer &amp; Optimization Expert · Acting Leader of No Excuse Guild · Emulator Modifier">
+  <meta property="og:image" content="assets/logo.png">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preload" as="image" href="assets/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Unbounded:wght@700;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1–2. Full-screen cinematic video + dark purple overlay -->
+  <div class="bg" id="bg" aria-hidden="true">
+    <!-- The video source is chosen in script.js (1080p on desktop, 720p on phones / data-saver). -->
+    <video id="bgVideo" class="bg__video" autoplay muted loop playsinline preload="auto"
+           poster="assets/poster.jpg" disablepictureinpicture disableremoteplayback tabindex="-1"></video>
+    <div class="bg__tint"></div>
+    <div class="bg__glow bg__glow--a"></div>
+    <div class="bg__glow bg__glow--b"></div>
+    <canvas id="particles" class="bg__particles"></canvas>
+    <div class="bg__vignette"></div>
+  </div>
+
+  <main class="stage">
+    <section class="profile" aria-labelledby="brand">
+
+      <!-- 3. Centered circular logo -->
+      <div class="avatar">
+        <span class="avatar__aura"></span>
+        <span class="avatar__ring"></span>
+        <img class="avatar__img" src="assets/logo.png" width="821" height="821"
+             alt="NOX TSR logo" decoding="async" fetchpriority="high">
+      </div>
+
+      <!-- 4. Brand name -->
+      <h1 class="brand" id="brand">NOX TSR</h1>
+      <span class="rule" aria-hidden="true"></span>
+
+      <!-- 5. Identity lines (exact order) -->
+      <ul class="roles">
+        <li>PC Optimizer &amp; Optimization Expert</li>
+        <li>Acting Leader of No Excuse Guild</li>
+        <li>Emulator Modifier</li>
+      </ul>
+
+      <!-- 6. Social buttons -->
+      <nav class="links" aria-label="Social links">
+        <a class="btn btn--discord" href="https://discord.gg/vUtAwnHAGD" target="_blank" rel="noopener noreferrer">
+          <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+          <span>Join My Discord</span>
+        </a>
+        <a class="btn btn--youtube" href="http://www.youtube.com/@noxtsr111" target="_blank" rel="noopener noreferrer">
+          <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          <span>Visit My YouTube</span>
+        </a>
+      </nav>
+
+      <!-- 7. Like button + count -->
+      <div class="like">
+        <button class="like__btn" id="likeBtn" type="button" aria-pressed="false" aria-label="Like this page">
+          <span class="like__heart" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <i class="like__burst"></i>
+          </span>
+          <span class="like__count" id="likeCount" aria-live="polite">—</span>
+          <span class="sr-only" id="likeText">likes</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- 8–10. Dock: views (bottom-left), footer, music (bottom-right) -->
+  <footer class="dock">
+    <div class="dock__left">
+      <div class="views" id="views" title="Total page views">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M1.5 12S5.5 5 12 5s10.5 7 10.5 7-4 7-10.5 7S1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3"/></svg>
+        <span>Views: <b id="viewsCount">—</b></span>
+        <em class="badge" id="demoBadge" hidden title="Demo mode: counts are stored only in this browser. See README to enable the real backend.">Demo</em>
+      </div>
+    </div>
+
+    <p class="dock__center">© <span id="year">2026</span> NOX TSR</p>
+
+    <div class="dock__right">
+      <span class="hint" id="soundHint">Tap anywhere for sound</span>
+      <div class="music" id="music">
+        <input class="music__vol" id="vol" type="range" min="0" max="100" value="60" aria-label="Volume">
+        <button class="music__btn" id="musicBtn" type="button" aria-pressed="false" aria-label="Turn sound on" data-state="off">
+          <svg class="ico ico--on" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></svg>
+          <svg class="ico ico--off" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/><path d="M3 3l18 18"/></svg>
+          <span class="music__label" id="musicLabel">Sound off</span>
+          <span class="music__eq" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript><style>.profile *{opacity:1!important;animation:none!important}</style></noscript>
+
+  <script src="config.js"></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
